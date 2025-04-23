@@ -1,0 +1,27 @@
+{
+  "name": "trpc-app",
+  "version": "1.0.0",
+  "description": "trpc demo application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db": "docker compose up -d",
+    "migrate": "npx prisma migrate dev",
+    "dev:server": "tsx watch server/server",
+    "dev:client": "wait-port 3000 && tsx watch client"
+  },
+  "author": "harisemail94@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "^6.6.0",
+    "@trpc/client": "^11.1.1",
+    "@trpc/server": "^11.1.1",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3",
+    "wait-port": "^1.1.0",
+    "zod": "^3.24.3"
+  },
+  "devDependencies": {
+    "prisma": "^6.6.0"
+  }
+}
